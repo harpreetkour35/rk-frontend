@@ -16,9 +16,4 @@ export const productsData = [
     title: "Sound Templates",
     description: "Latest sound tracks",
   },
-  {
-    id: "k4",
-    title: "Sound Templates",
-    description: "Latest sound tracks",
-  },
 ];

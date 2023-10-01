@@ -1,16 +1,16 @@
 import { CarouselCustomArrows } from "./components/Carousal";
 import { FooterWithSocialLinks } from "./components/Footer";
-import { StickyNavbar } from "./components/Navbar";
+import { Navbar } from "./components/Navbar";
 import Product from "./components/Product";
 import { productsData } from "./data/products";
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-gray-200">
-      <StickyNavbar />
-      <div className="container px-5 py-24 mx-auto">
+    <div className="bg-[#1A1A1A] overflow-hidden">
+      <Navbar />
+      <div className="container px-5 py-14 mx-auto">
         <CarouselCustomArrows />
-        <div className="flex flex-wrap -m-4">
+        <div className="flex flex-wrap -m-4 py-10">
           {productsData.map((data) => (
             <Product data={data} key={data.id} />
           ))}
