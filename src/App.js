@@ -1,22 +1,20 @@
-import { CarouselCustomArrows } from "./components/Carousal";
-import { FooterWithSocialLinks } from "./components/Footer";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Collections from "./pages/Collections";
 import { Navbar } from "./components/Navbar";
-import Product from "./components/Product";
-import { productsData } from "./data/products";
 
 const App = () => {
   return (
-    <div className="bg-[#1A1A1A] overflow-hidden">
+    <div className="App">
       <Navbar />
-      <div className="container px-5 py-14 mx-auto">
-        <CarouselCustomArrows />
-        <div className="flex flex-wrap -m-4 py-10">
-          {productsData.map((data) => (
-            <Product data={data} key={data.id} />
-          ))}
-        </div>
-      </div>
-      <FooterWithSocialLinks />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="collections" element={<Collections />} />
+      </Routes>
     </div>
   );
 };
