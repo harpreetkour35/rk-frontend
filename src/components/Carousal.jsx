@@ -1,4 +1,4 @@
-import { Carousel, IconButton } from "@material-tailwind/react";
+import { Carousel } from "@material-tailwind/react";
 import ssImage1 from "../assets/ss1.png";
 import ssImage2 from "../assets/ss2.png";
 
