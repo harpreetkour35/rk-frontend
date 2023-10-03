@@ -1,9 +1,6 @@
 import { CardDefault } from "../components/Card";
 import { CarouselCustomArrows } from "../components/Carousal";
 import { FooterWithSocialLinks } from "../components/Footer";
-import { Navbar } from "../components/Navbar";
-import { PriceCard } from "../components/PricedCard";
-import Product from "../components/Product";
 import { productsData } from "../data/products";
 
 const Home = () => {
