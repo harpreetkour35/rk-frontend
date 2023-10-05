@@ -6,7 +6,7 @@ export const Header = () => {
   return (
     <header className="header sticky top-0 bg-white shadow-xl flex items-center justify-between px-8 py-4 z-40">
       <DrawerWithNavigation />
-      <Link to="" className="w-3/12">
+      <Link to="">
         <h1 className="text-lg">RUDRA KUSH</h1>
       </Link>
       <Link to="cart">
