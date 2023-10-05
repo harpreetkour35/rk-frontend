@@ -3,12 +3,12 @@ import Home from "./pages/home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Collections from "./pages/Collections";
-import { Navbar } from "./components/Navbar";
+import { Header } from "./components/Header";
 
 const App = () => {
   return (
     <div className="App">
-      <Navbar />
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
