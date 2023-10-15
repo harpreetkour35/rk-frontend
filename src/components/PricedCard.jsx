@@ -7,43 +7,105 @@ import {
   Button,
 } from "@material-tailwind/react";
 
-export function PriceCard() {
+function CheckIcon() {
   return (
-    <Card className="w-80">
-      <CardHeader shadow={false} floated={false} className="h-60">
-        <img
-          src="https://images.unsplash.com/photo-1629367494173-c78a56567877?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80"
-          alt="cardimageprice"
-          className="h-full w-full object-cover"
-        />
-      </CardHeader>
-      <CardBody>
-        <div className="mb-2 flex items-center justify-between">
-          <Typography color="blue-gray" className="font-medium">
-            Apple AirPods
-          </Typography>
-          <Typography color="blue-gray" className="font-medium">
-            $95.00
-          </Typography>
-        </div>
-        <Typography
-          variant="small"
-          color="gray"
-          className="font-normal opacity-75"
-        >
-          With plenty of talk and listen time, voice-activated Siri access, and
-          an available wireless charging case.
-        </Typography>
-      </CardBody>
-      <CardFooter className="pt-0">
-        <Button
-          ripple={false}
-          fullWidth={true}
-          className="bg-blue-gray-900/10 text-blue-gray-900 shadow-none hover:scale-105 hover:bg-[#995E49] hover:shadow-none focus:scale-105 focus:shadow-none active:scale-100"
-        >
-          Add to Cart
-        </Button>
-      </CardFooter>
-    </Card>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={2}
+      stroke="currentColor"
+      className="h-3 w-3"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M4.5 12.75l6 6 9-13.5"
+      />
+    </svg>
+  );
+}
+
+export function PricedCard({ invis }) {
+  return (
+    <>
+      <div class="group relative w-full max-w-[20rem]">
+        <Card color="gray" variant="gradient" className=" p-8 absolute">
+          <CardHeader
+            floated={false}
+            shadow={false}
+            color="transparent"
+            className=" m-0 mb-8 rounded-none border-b border-white/10 pb-8 text-center"
+          >
+            <Typography
+              variant="small"
+              color="white"
+              className="font-normal uppercase"
+            >
+              standard
+            </Typography>
+            <Typography
+              variant="h1"
+              color="white"
+              className="mt-6 flex justify-center gap-1 text-7xl font-normal"
+            >
+              <span className="mt-2 text-4xl">$</span>29{" "}
+              <span className="self-end text-4xl">/mo</span>
+            </Typography>
+          </CardHeader>
+          <CardBody className="p-0">
+            <ul className="flex flex-col gap-4">
+              <li className="flex items-center gap-4">
+                <span className="rounded-full border border-white/20 bg-white/20 p-1">
+                  <CheckIcon />
+                </span>
+                <Typography className="font-normal">5 team members</Typography>
+              </li>
+              <li className="flex items-center gap-4">
+                <span className="rounded-full border border-white/20 bg-white/20 p-1">
+                  <CheckIcon />
+                </span>
+                <Typography className="font-normal">200+ components</Typography>
+              </li>
+              <li className="flex items-center gap-4">
+                <span className="rounded-full border border-white/20 bg-white/20 p-1">
+                  <CheckIcon />
+                </span>
+                <Typography className="font-normal">
+                  40+ built-in pages
+                </Typography>
+              </li>
+              <li className="flex items-center gap-4">
+                <span className="rounded-full border border-white/20 bg-white/20 p-1">
+                  <CheckIcon />
+                </span>
+                <Typography className="font-normal">
+                  1 year free updates
+                </Typography>
+              </li>
+              <li className="flex items-center gap-4">
+                <span className="rounded-full border border-white/20 bg-white/20 p-1">
+                  <CheckIcon />
+                </span>
+                <Typography className="font-normal">
+                  Life time technical support
+                </Typography>
+              </li>
+            </ul>
+          </CardBody>
+          <CardFooter className="mt-12 p-0">
+            <Button
+              size="lg"
+              color="white"
+              className="hover:scale-[1.02] focus:scale-[1.02] active:scale-100"
+              ripple={false}
+              fullWidth={true}
+            >
+              Buy Now
+            </Button>
+          </CardFooter>
+        </Card>
+      </div>
+    </>
   );
 }

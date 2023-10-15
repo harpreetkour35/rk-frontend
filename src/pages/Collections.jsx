@@ -1,12 +1,12 @@
 import React from "react";
-import { PriceCard } from "../components/PricedCard";
+import { PricedCard } from "../components/PricedCard";
 
 const Collections = () => {
-  const newArray = [0, 1, 2, 3, 4, 5, 6, 7];
+  const newArray = [0, 1, 2];
   return (
-    <div className="flex flex-wrap py-8 gap-y-3">
+    <div className="flex flex-wrap justify-evenly py-8 gap-y-3">
       {newArray.map((data) => (
-        <PriceCard />
+        <PricedCard invis={false} key={data} />
       ))}
     </div>
   );
