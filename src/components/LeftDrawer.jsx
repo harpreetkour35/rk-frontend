@@ -67,7 +67,7 @@ export function LeftDrawer() {
                 />
               </svg>
             </ListItemPrefix>
-            Dashboard
+            All Kits
           </ListItem>
           <ListItem>
             <ListItemPrefix>
