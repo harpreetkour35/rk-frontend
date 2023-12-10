@@ -12,17 +12,20 @@ import { useNavigate } from "react-router-dom";
 export function CardDefault({ data }) {
   const navigate = useNavigate();
   return (
-    <Card className="mt-6 w-[22rem]">
+    <Card className="mt-6 w-[23rem]">
       <CardHeader color="blue-gray" className="relative h-56">
-        <img src={productimage} alt="card-img" />
+        <img
+          src="https://ucarecdn.com/dc502c40-b109-4e1f-a00d-c4fcb4f8010b/-/format/auto/-/preview/480x480/-/quality/lighter/DRUMS%202.webp"
+          alt="card-img"
+        />
       </CardHeader>
-      <CardBody>
-        <Typography variant="h5" color="blue-gray" className="mb-2">
+      <CardBody className="min-h-[155px]">
+        <Typography variant="h5" color="blue-gray">
           {data.title}
         </Typography>
-        <Typography>{data.description}</Typography>
+        <Typography className="mt-2">{data.description}</Typography>
       </CardBody>
-      <CardFooter className="pt-0">
+      <CardFooter>
         <Button onClick={() => navigate("/collections")}>Explore</Button>
       </CardFooter>
     </Card>
