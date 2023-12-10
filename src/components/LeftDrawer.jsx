@@ -9,7 +9,7 @@ import {
   Chip,
 } from "@material-tailwind/react";
 
-export function DrawerWithNavigation() {
+export function LeftDrawer() {
   const [open, setOpen] = React.useState(false);
   const openDrawer = () => setOpen(true);
   const closeDrawer = () => setOpen(false);
