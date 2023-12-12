@@ -4,14 +4,14 @@ const currentYear = new Date().getFullYear();
 
 export function FooterWithSocialLinks() {
   return (
-    <footer className="relative w-full bg-white">
+    <footer className="w-full bg-white">
       <div className="mx-auto w-full max-w-7xl px-8">
         <div className="flex w-full flex-col items-center justify-center border-t border-blue-gray-50 py-4 md:flex-row md:justify-between">
           <Typography
             variant="small"
             className="mb-4 text-center font-normal text-blue-gray-900 md:mb-0"
           >
-            &copy; {currentYear}{" "}
+            &copy; {currentYear}
             <a href="https://material-tailwind.com/">Rudra Kush</a>. All Rights
             Reserved.
           </Typography>

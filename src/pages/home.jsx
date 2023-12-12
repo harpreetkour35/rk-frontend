@@ -1,5 +1,4 @@
 import { Slider } from "../components/Slider";
-import { FooterWithSocialLinks } from "../components/Footer";
 import { productsData } from "../data/products";
 import CardNew from "../components/cards/CardNew";
 
@@ -24,7 +23,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <FooterWithSocialLinks />
     </div>
   );
 };

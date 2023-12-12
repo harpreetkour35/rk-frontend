@@ -4,12 +4,13 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Collections from "./pages/Collections";
 import { Header } from "./components/Header";
-import CartProvider from "./cartContext";
+import ShopContextProvider from "./context/ShopContext";
+import { FooterWithSocialLinks } from "./components/Footer";
 
 const App = () => {
   return (
-    <CartProvider>
-      <div className="App">
+    <ShopContextProvider>
+      <div className="App min-h-screen">
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -17,8 +18,9 @@ const App = () => {
           <Route path="contact" element={<Contact />} />
           <Route path="collections" element={<Collections />} />
         </Routes>
+        <FooterWithSocialLinks />
       </div>
-    </CartProvider>
+    </ShopContextProvider>
   );
 };
 
